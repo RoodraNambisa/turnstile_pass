@@ -25,6 +25,7 @@ def initialize_browser():
 
     browser = Chromium(addr_or_opts=co)
     tab = browser.latest_tab
+    tab.set.load_mode.eager()
     return browser, tab
 
 def get_TurnstileToken(website, sitekey, tab,max_retries=3):
